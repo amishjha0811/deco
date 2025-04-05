@@ -1,11 +1,39 @@
 import React from 'react';
-import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-700 py-10 px-6 mt-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Address Section */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Location</h3>
+          <ul className="space-y-2">
+            <li>
+            <Link
+              to="https://www.google.com/maps/place/Sector+52,+Wazirabad,+Haryana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-indigo-600 flex items-center space-x-2"
+            >
+              <span>Sector-52, Wazirabad,
+                Haryana, India</span>
+            </Link>
+            </li>
+
+            <li className="flex items-center space-x-2">
+            
+              <Phone size={18} />
+              <Link to="tel:+919560570695" className="hover:text-indigo-600" >Call US</Link>
+            </li>
+            <li className="flex items-center space-x-2">
+              <Mail size={18} />
+              <Link to="mailto:contact@decowale.com" className="hover:text-indigo-600">contact@decowale.com</Link>
+            </li>
+          </ul>
+        </div>
+
         {/* Top Categories */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Top Categories</h3>
@@ -52,8 +80,8 @@ function Footer() {
 
           {/* Info with Social Icons */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Info</h3>
-          <div className="flex flex-col space-y-4">
+          <h3 className="text-lg font-semibold mb-4">Social Links</h3>
+          <div className="flex flex-col space-y-4 w-33">
 
             <Link
 
@@ -62,7 +90,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="hover:text-indigo-600 flex items-center space-x-2"
             >
-              <Facebook size={24} />
+              <Facebook size={22} />
               <span>Facebook</span>
             </Link>
             <Link
@@ -71,7 +99,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="hover:text-indigo-600 flex items-center space-x-2"
             >
-              <Instagram size={24} />
+              <Instagram size={22} />
               <span>Instagram</span>
             </Link>
             <Link
@@ -80,7 +108,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="hover:text-indigo-600 flex items-center space-x-2"
             >
-              <Youtube size={24} />
+              <Youtube size={22} />
               <span>YouTube</span>
             </Link>
           </div>
