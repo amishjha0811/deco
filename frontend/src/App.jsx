@@ -1,10 +1,17 @@
 import './index.css'
 import Homepage from './pages/Homepage'
+import Decorations from './pages/Decorations'
+import { Routes, Route } from "react-router-dom";
 
 function App() {
 
   return (
-    <Homepage/>
+    <div>
+      <Routes>
+        <Route path='/' element={<Homepage/>}/>
+        <Route path='/Decorations' element={<Decorations/>}/>
+      </Routes> 
+    </div>
   )
 }
 
