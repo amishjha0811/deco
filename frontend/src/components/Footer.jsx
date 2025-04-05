@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -9,9 +10,21 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Top Categories</h3>
           <ul className="space-y-2">
-            <li className="hover:text-indigo-600 cursor-pointer">Birthday Decoration</li>
-            <li className="hover:text-indigo-600 cursor-pointer">Anniversary Decoration</li>
-            <li className="hover:text-indigo-600 cursor-pointer">Baby Shower</li>
+            <li>
+              <Link to={"/Birthday"} className="hover:text-indigo-600 cursor-pointer">
+                Birthday Decoration
+              </Link>
+            </li>
+            <li>
+              <Link to={"/Anniversary"} className="hover:text-indigo-600 cursor-pointer">
+                Anniversary Decoration
+              </Link>
+            </li>
+            <li>
+              <Link to={"/BabyShower"}className="hover:text-indigo-600 cursor-pointer">
+                Baby Shower
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -19,45 +32,57 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Important Links</h3>
           <ul className="space-y-2">
-            <li className="hover:text-indigo-600 cursor-pointer">Terms & Conditions</li>
-            <li className="hover:text-indigo-600 cursor-pointer">About Us</li>
-            <li className="hover:text-indigo-600 cursor-pointer">Disclaimer</li>
+            <li>
+              <Link to={"/Terms"} className="hover:text-indigo-600 cursor-pointer">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link to={"/About"} className="hover:text-indigo-600 cursor-pointer">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to={"/Disclaimer"} className="hover:text-indigo-600 cursor-pointer">
+                Disclaimer
+              </Link>
+            </li>
           </ul>
         </div>
 
-        
-        {/* Info with Social Icons */}
-            
+          {/* Info with Social Icons */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Info</h3>
           <div className="flex flex-col space-y-4">
-            <a
-              href="https://facebook.com"
+
+            <Link
+
+              to="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-indigo-600 flex items-center space-x-2"
             >
               <Facebook size={24} />
               <span>Facebook</span>
-            </a>
-            <a
-              href="https://www.instagram.com/decowale?igsh=MWxiM2NoOWlxajRteA=="
+            </Link>
+            <Link
+              to="https://www.instagram.com/decowale?igsh=MWxiM2NoOWlxajRteA=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-indigo-600 flex items-center space-x-2"
             >
               <Instagram size={24} />
               <span>Instagram</span>
-            </a>
-            <a
-              href="https://youtube.com/@decowale?si=JY-zRWl2TQyeQEcN"
+            </Link>
+            <Link
+              to="https://youtube.com/@decowale?si=JY-zRWl2TQyeQEcN"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-indigo-600 flex items-center space-x-2"
             >
               <Youtube size={24} />
               <span>YouTube</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
