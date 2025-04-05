@@ -1,9 +1,10 @@
 import './index.css'
+import Homepage from './pages/Homepage'
 
 function App() {
 
   return (
-    <div className='text-center font-bold'>Hello</div>
+    <Homepage/>
   )
 }
 
