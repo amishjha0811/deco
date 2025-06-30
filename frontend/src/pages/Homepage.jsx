@@ -56,7 +56,7 @@ const Homepage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-100 to-white px-6 md:px-20 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
+      <section className="bg-gradient-to-r from-blue-500 via-blue-200 to-white px-6 md:px-20 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
         <div className="w-full md:w-1/2 space-y-6 mt-10 md:mt-0">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
             Celebrate in Style with <span className="text-purple-700">Deco Wale</span>
@@ -79,9 +79,9 @@ const Homepage = () => {
         </div>
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src="/cake.jpg"
+            src="/bghome.png"
             alt="Decor sample"
-            className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+            className=" w-full"
           />
         </div>
       </section>
